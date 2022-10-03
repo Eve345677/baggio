@@ -1,0 +1,70 @@
+.fondo {
+  width: 101%;
+  height: 350px;
+  position: relative;
+  display: inline-block;
+  padding-left: 1px;
+}
+
+.centrado {
+  position: absolute;
+  top: 50px;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+
+}
+
+.contenedor {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.centrado2 {
+  position: absolute;
+  top: 18%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: white;
+}
+
+.carrusel {
+  width: 1200px;
+  height: 500px;
+
+  margin-left: 20px;
+}
+
+.card1 {
+  border: solid green;
+  width: 250px;
+  margin: 4px;
+  float: left;
+  margin-left: 57px;
+
+
+
+}
+
+.contenedor1 {
+  display: flex;
+
+}
+
+.carousel-control-prev {
+
+  margin-left: 124px;
+  width: 50px;
+}
+
+.carousel-control-next {
+
+  width: 50px;
+  margin-right: 105px;
+}
+
+.carousel-caption d-none d-md-block {
+  color: blue;
+}
