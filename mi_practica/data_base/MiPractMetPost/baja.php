@@ -3,7 +3,7 @@
 </html>
 <?php
 $clave = $_POST['clave'];
-$base = "administración";
+$base = "administracion";
 $Conexion = mysqli_connect("localhost", "root", "", $base);
 if ($Conexion) {
     echo "La coneccion con la base de datos fue exitosa"."<br>";
