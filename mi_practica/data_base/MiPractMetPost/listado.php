@@ -2,7 +2,7 @@
     <h3>Listado de Alumnos</h3>
 
 <?php
-$base= "administración";
+$base= "administracion";
 $Conexion=mysqli_connect("localhost","root","",$base);
 if ($Conexion){
     echo "La coneccion con la base de datos fue un exito"."<br>";
