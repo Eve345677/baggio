@@ -1,0 +1,16 @@
+Aquí las armas a las que les faltan imagenes (Si ya está colocada agregar una 'X' al lado):
+Escopetas:
+M71
+SpecOps
+Valtro
+SPAS-12
+Fusiles de asalto:
+FAMA
+H&K G41
+Carabinas:
+FAMca
+Fusiles de francotirador:
+Sako TRG
+CZ 750
+Lanzacohetes:
+AT4
