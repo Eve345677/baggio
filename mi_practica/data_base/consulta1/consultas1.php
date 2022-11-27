@@ -7,7 +7,8 @@ echo "INSERT INTO `usuarios`(`usu_id`, `usu_login`, `usu_clave`, `usu_nombre`, `
 echo"SELECT * FROM `productos` WHERE `prd_precio`>1000 && `prd_precio`<3000; ";
 ?>
 <?php
-echo"UPDATE `productos` SET `prd_precio` = '100' WHERE `productos`.`prd_id` = 12;";
+echo"UPDATE `productos` SET `prd_precio` = '100' WHERE `prd_nombre` LIKE 'ipad%';
+";
 ?>
 <?php
 echo"DELETE FROM `usuarios` WHERE usu_id=3;";
