@@ -1,0 +1,6 @@
+3)
+    a) La función es mysqli_fetch_all()
+    b) Es la función mysqli_num_rows() y recibe como parametro la consulta a la que se quiere contar los registros, de tipo array
+4)
+    a) SELECT * FROM productos INNER JOIN categorias ON productos.cat_id = categorias.cat_id WHERE cat_nombre LIKE '%celular%' OR productos.prd_descripcion LIKE '%celular%'
+    b)SELECT categorias.cat_nombre,COUNT(productos.cat_id) FROM categorias INNER JOIN productos ON categorias.cat_id = productos.cat_id GROUP BY categorias.cat_id;
