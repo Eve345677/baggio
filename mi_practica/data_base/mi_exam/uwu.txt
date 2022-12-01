@@ -1,0 +1,83 @@
+mysqli_connect 
+                Esta funcion de php nos permite armar o establecer una conxion con una base de datos, los parametros 
+                q acepta son el servidor(en el q se trabaja), usuario, contraseña, la base de datos
+                ejemplo: 
+                $enlace = mysqli_connect("servidor", "mi_usuario", "mi_contraseña", "base_datos");
+                pero aca solo utilizariamos la siguiente conexion:
+                $con = mysqli_connect("localhost", "root", "", "base_datos");
+
+mysqli_connect_errno 
+                    esta funcion de php nos devuelve Un código de error para la ultima llamada a mysqli_connect(), 
+                    si ha fallado. Los parametro que acepta son la variable donde se guarda la llamada a mysqli_connect 
+                    ó directamente la llamada a mysqli_connect
+                    ejemplo:
+                    $base="base_datos";
+                    $con = mysqli_connect("localhost", "root", "", $base);
+                    if (!$link) {
+                        die("Connect Error: " . mysqli_connect_errno($link));
+                    }
+
+require_once 
+            esta funcion nos permite enlazar archivos y que estos si tiene un error lo marca al instante
+            tipo si tengo una funcion ó conexion a una tabla simplemente al principio del otro archivo hago este 
+            require_once no habra necesidad de definirla otra vez 
+            estructura:
+            require_once "archivo.php";
+            respectar espacios!!!!
+isset
+        esta funcion Determina si una variable está definida y no es null.Si son pasados varios parámetros, entonces 
+        isset() devolverá true únicamente si todos los parámetros están definidos. La evaluación se realiza de izquierda 
+        a derecha y se detiene tan pronto como se encuentre una variable no definida.
+        estructura:
+        isset($variable);
+        ejemplo:
+        isset($_POST['nombre']);
+        esto recorre tambien base de datos, array y objetos
+
+mysqli_query
+            esta funcion nos permite unir y comprobar si una consulta esta bien escrita y ejecutada,claramente tambien 
+            hay q poner la conexion de base datos para q puede hacer la comprobacion
+            estructura:
+            $query=mysqli_query($conexio, $consulta);
+            ejemplo:
+            $con = mysqli_connect("localhost", "root", "", $base);
+            $sql="SELECT * FROM usuarios WHERE usu_nombre LIKE "%S%" ";
+            $query=mysqli_query($con, $sql);
+
+mysqli_errno()
+            funcion que es un identificador de enlace devuelto por mysqli_connect() o mysqli_init(). Devuelve un 
+            código de error de la última llamada, si ésta ha fallado. Si devuelve cero significa que no ha ocurrido 
+            ningún error.
+            estructura:
+            mysqli_errno($con);
+
+mysqli_fetch_assoc()
+                    esta funcion devuelve un array asociativo de strings que representa a la fila obtenida del conjunto 
+                    de resultados, donde cada clave del array representa el nombre de una de las columnas de éste; o null 
+                    si no hubieran más filas en dicho conjunto de resultados.
+                    Si dos o más columnas del resultado tienen el mismo nombre de campo, la última columna tomará 
+                    precedencia. Para acceder a la/s otra/s columna/s con el mismo nombre, es necesario acceder al 
+                    resultado ya sea usando los índices numéricos mediante mysqli_fetch_row(), ya sea añadiéndole alias 
+                    a los campos. Puede recorrer valores tanto como de un array o de una base de datos.
+
+mysqli_fetch_row()
+                esta funcion devuelve un array numerico unicamente que representa a la fila obtenida del conjunto 
+                de resultados, donde cada clave del array representa el nombre de una de las columnas de éste; o null 
+                si no hubieran más filas en dicho conjunto de resultados.
+                Si dos o más columnas del resultado tienen el mismo nombre de campo, la última columna tomará 
+                precedencia. Para acceder a la/s otra/s columna/s con el mismo nombre, es necesario acceder al 
+                resultado ya sea usando los índices numéricos mediante mysqli_fetch_row(), ya sea añadiéndole alias 
+                a los campos. Puede recorrer valores tanto como de un array o de una base de datos.
+
+mysqli_fetch_all()
+                te devuelve un array bidimensional. Es decir consulta todas las filas y devuelve el resultado en un 
+                array asociativo, numérico, o ambos. Es decir (x2) que son lo dos de arriba pero junto lo malo es q consume
+                demaciada memoria y alenta o congela la pagina
+
+mysqli_num_rows()
+                Retorna el número de filas ó posiciones del resultado. puede ser tanto de array como de resultados de 
+                una consulta a una base de datos.
+
+
+
+
